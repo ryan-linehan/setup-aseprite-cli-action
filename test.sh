@@ -14,8 +14,6 @@ echo "=== Aseprite export ==="
 aseprite --batch --list-tags --trim ./test/example.ase --data ./test/actual/example.json --save-as ./test/actual/example.png
 echo "=== Aseprite help ==="
 aseprite --batch --help
-echo "=== Aseprite version ==="
-aseprite --batch --version
 
 cmp <(ls ./test/actual) <(echo "example.json
 example1.png
