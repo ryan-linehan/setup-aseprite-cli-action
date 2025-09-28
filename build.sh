@@ -15,7 +15,7 @@ if [ "$(uname)" == "Darwin" ]; then
   brew install ninja
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   sudo apt-get update
-  sudo apt-get install ninja-build xorg-dev
+  sudo apt-get install -y g++ clang cmake ninja-build libx11-dev libxcursor-dev libxi-dev libxrandr-dev libgl1-mesa-dev libfontconfig1-dev
 else
   choco install ninja
 fi

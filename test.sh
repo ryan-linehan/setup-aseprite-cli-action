@@ -2,6 +2,13 @@ set -e
 
 rm -rf ./test/actual
 
+# Debug: Check if binary exists and what it needs
+echo "=== Debugging aseprite binary ==="
+ls -la build/bin/aseprite
+file build/bin/aseprite
+echo "=== Checking library dependencies ==="
+ldd build/bin/aseprite
+echo "=== Running aseprite commands ==="
 
 aseprite --batch --help
 aseprite --batch --version
