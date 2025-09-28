@@ -2,6 +2,9 @@ set -e
 
 rm -rf ./test/actual
 
+
+aseprite --batch --help
+aseprite --batch --version
 aseprite --batch --list-tags --trim ./test/example.ase --data ./test/actual/example.json --save-as ./test/actual/example.png
 
 cmp <(ls ./test/actual) <(echo "example.json
